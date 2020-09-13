@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "yt recommendation free",
+  "version": "0.1",
+  "description": "removes recommendation from yt",
+  "permissions": [
+    "management",
+    "declarativeContent",
+    "storage",
+    "webNavigation",
+    "tabs",
+    "https://www.youtube.com/*",
+    "tabCapture",
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://*.youtube.com/*", "http://*.youtube.com/*"],
+      "permissions": ["activeTab"],
+      "js": ["content.js"]
+    }
+  ]
+}
